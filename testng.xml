@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Glady AutF_AllureParallel" thread-count="5" parallel="methods"
+	data-provider-thread-count="5">
+	<listeners>
+		<listener class-name="listeners.AllureListener"></listener>
+	</listeners>
+
+	<test name="TestGoogle">
+		<parameter name="browser" value="Opera"></parameter>
+		<parameter name="url" value="https://www.google.co.in/"></parameter>
+		<classes>
+			<class name="tests.Test1" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->
