@@ -1,4 +1,4 @@
-# WebApp Automation Framework with Webdriver Manager Support
+# WebApp Automation Framework with Parallel Execution using TestNG
 
 [![N|Solid](http://www.seleniumhq.org/images/selenium-logo.png)](http://www.seleniumhq.org/) 
 
@@ -8,7 +8,6 @@ This is a Selenium Hybrid Framework.
  - Build Toold - Maven
  - Implemented Page Object Model Design Pattern
  - Excel TestNG @DataProvider
- - Video Recording - Monte Repack
  - WebDriver Manager - Auto Download of required drivers. 
  - AShot - Captures Entire Webpage Screenshot
 
@@ -26,8 +25,6 @@ This is a Selenium Hybrid Framework.
 
 ### Platform Support
  - Windows
- - Linux
- - Macintosh
 
 ---
 ### Reporting
@@ -41,18 +38,16 @@ $ mvn clean test
 ```
 ---
 ### Browser Setup
- - Navigate to *WebAutomation\src\main\resources* change *BrowserType* in the ApplicationConfig.properties
- or use Maven to invoke different browsers
+ - Navigate to *testng.xml* change *value* for the parameter type *browser*
 
-```sh
-$ mvn clean test -DBrowserType=Chrome			#Chrome
-$ mvn clean test -DBrowserType=Chrome_Headless		#Chrome Headless
-$ mvn clean test -DBrowserType=Firefox			#Mozilla Firefox
-$ mvn clean test -DBrowserType=IE			#Internet Explorer
-$ mvn clean test -DBrowserType=Opera			#Opera Blink
-$ mvn clean test -DBrowserType=Edge			#Microsoft Edge
-$ mvn clean test -DBrowserType=Unit			#HTML Unit Headerless Browser
-```
+---
+### URL Setup
+- Navigate to *testng.xml* change *value* for the parameter type *url*
+
+---
+### Parallel Execution
+- Navigate to *testng.xml* change *thread-count* and *data-provider-thread-count* values.
+
 ---
 ### Report Generation
 ```sh
