@@ -11,9 +11,10 @@ import javax.imageio.ImageIO;
 
 import org.openqa.selenium.WebDriver;
 
-import ru.yandex.qatools.allure.annotations.Attachment;
+import io.qameta.allure.Attachment;
 import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+
 
 /**
  * @Author Gladson Antony

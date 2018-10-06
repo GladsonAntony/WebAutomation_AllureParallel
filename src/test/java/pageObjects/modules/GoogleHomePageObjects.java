@@ -6,9 +6,8 @@ package pageObjects.modules;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import io.qameta.allure.Step;
 import pageObjects.initializePageObjects.PageFactoryInitializer;
-import ru.yandex.qatools.allure.annotations.Step;
-import utils.FluentWaiting;
 import utils.RandomGenerator;
 
 /**
@@ -27,7 +26,6 @@ public class GoogleHomePageObjects extends PageFactoryInitializer
 	@Step("Click On Gmail Link in the Google Home Page")
 	public GoogleHomePageObjects clickonGmailLink() throws Exception
 	{
-		FluentWaiting.waitUntillElementToBeClickable(5, 500, GmailLink);
 		click(GmailLink);
 		return this;		
 	}
@@ -42,7 +40,6 @@ public class GoogleHomePageObjects extends PageFactoryInitializer
 	@Step("Verify the Page Title of the Google Home Page")
 	public GoogleHomePageObjects verifyPageTitle() throws Exception 
 	{
-		FluentWaiting.waitForTitleToBe(5, 500, "Google");
 		return this;
 	}
 

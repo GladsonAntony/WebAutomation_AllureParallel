@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>WebAutomation_AllureParallel</groupId>
@@ -13,11 +14,15 @@
 		<compiler.version>1.8</compiler.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<selenium.version>3.5.3</selenium.version>
-		<allure.version>1.5.4</allure.version>
-		<aspectj.version>1.8.10</aspectj.version>
+		<testng.version>6.14.3</testng.version>
+		<selenium.version>3.14.0</selenium.version>
+		<allure.version>2.7.0</allure.version>
+		<aspectj.version>1.9.1</aspectj.version>
 		<apachepoi.version>3.13</apachepoi.version>
 		<slf4j.version>1.7.24</slf4j.version>
+		<htmlelements.version>1.19</htmlelements.version>
+		<ashot.version>1.5.4</ashot.version>
+		<seleniumshutterbag.version>0.9</seleniumshutterbag.version>
 	</properties>
 
 	<!-- All the Dependencies Added Here -->
@@ -27,7 +32,7 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.11</version>
+			<version>${testng.version}</version>
 		</dependency>
 
 
@@ -85,7 +90,7 @@
 			<artifactId>htmlunit-driver</artifactId>
 			<version>2.23.1</version>
 		</dependency>
-		
+
 
 		<!-- HTML Unit Headerless Browser Dependency -->
 		<dependency>
@@ -93,7 +98,7 @@
 			<artifactId>htmlunit</artifactId>
 			<version>2.27</version>
 		</dependency>
-		
+
 
 		<!-- Selenium Support Dependency -->
 		<dependency>
@@ -103,7 +108,7 @@
 		</dependency>
 
 
-		<!-- Monte-Video Recorder Dependancy -->
+		<!-- Monte-Video Recorder Dependency -->
 		<dependency>
 			<groupId>com.pojosontheweb</groupId>
 			<artifactId>monte-repack</artifactId>
@@ -111,23 +116,31 @@
 		</dependency>
 
 
-		<!-- YANDEX QATools Properties Dependancy -->
-		<dependency>
+		<!-- YANDEX QATools Properties Dependency -->
+<!-- 		<dependency>
 			<groupId>ru.yandex.qatools.properties</groupId>
 			<artifactId>properties-loader</artifactId>
 			<version>1.5</version>
-		</dependency>
+		</dependency> -->
 
 
-		<!-- AShot Dependancy -->
+		<!-- AShot Dependency -->
 		<dependency>
 			<groupId>ru.yandex.qatools.ashot</groupId>
 			<artifactId>ashot</artifactId>
-			<version>1.5.4</version>
+			<version>${ashot.version}</version>
 		</dependency>
 
 
-		<!-- Hamcrest Dependancy -->
+		<!-- Selenium Shutterbag Dependency -->
+		<dependency>
+			<groupId>com.assertthat</groupId>
+			<artifactId>selenium-shutterbug</artifactId>
+			<version>${seleniumshutterbag.version}</version>
+		</dependency>
+
+
+		<!-- Hamcrest Dependency -->
 		<dependency>
 			<groupId>org.hamcrest</groupId>
 			<artifactId>hamcrest-all</artifactId>
@@ -135,15 +148,7 @@
 		</dependency>
 
 
-		<!-- Allure Java Annotations Dependancy -->
-		<dependency>
-			<groupId>ru.yandex.qatools.allure</groupId>
-			<artifactId>allure-java-annotations</artifactId>
-			<version>${allure.version}</version>
-		</dependency>
-
-
-		<!-- Allure Java Properties Dependancy -->
+		<!-- Allure Java Properties Dependency -->
 		<dependency>
 			<groupId>ru.qatools.commons</groupId>
 			<artifactId>properties</artifactId>
@@ -151,33 +156,11 @@
 		</dependency>
 
 
-		<!-- Fluent Selenium Dependancy -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium.fluent</groupId>
-			<artifactId>fluent-selenium</artifactId>
-			<version>1.16.1</version>
-		</dependency>
-
-
-		<!-- Allure TestNG Adapter -->
-		<dependency>
-			<groupId>ru.yandex.qatools.allure</groupId>
-			<artifactId>allure-testng-adaptor</artifactId>
-			<version>${allure.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>junit</groupId>
-					<artifactId>junit</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
-
-
 		<!-- HTML Elements from QA Tools to setup Page Object Model -->
 		<dependency>
 			<groupId>ru.yandex.qatools.htmlelements</groupId>
 			<artifactId>htmlelements-java</artifactId>
-			<version>1.17</version>
+			<version>${htmlelements.version}</version>
 		</dependency>
 
 
@@ -189,7 +172,7 @@
 		</dependency>
 
 
-		<!-- Apache POI Dependancy -->
+		<!-- Apache POI Dependency -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
@@ -197,7 +180,7 @@
 		</dependency>
 
 
-		<!-- Apache POI-OOXML Dependancy -->
+		<!-- Apache POI-OOXML Dependency -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
@@ -205,7 +188,7 @@
 		</dependency>
 
 
-		<!-- Apache POI-OOXML SCHEMAS Dependancy -->
+		<!-- Apache POI-OOXML SCHEMAS Dependency -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml-schemas</artifactId>
@@ -213,7 +196,7 @@
 		</dependency>
 
 
-		<!-- Apache OOXML SCHEMAS Dependancy -->
+		<!-- Apache OOXML SCHEMAS Dependency -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>ooxml-schemas</artifactId>
@@ -221,7 +204,7 @@
 		</dependency>
 
 
-		<!-- Apache XML BEANS Dependancy -->
+		<!-- Apache XML BEANS Dependency -->
 		<dependency>
 			<groupId>org.apache.xmlbeans</groupId>
 			<artifactId>xmlbeans</artifactId>
@@ -229,7 +212,7 @@
 		</dependency>
 
 
-		<!-- ASPECTJ Tools Dependancy -->
+		<!-- ASPECTJ Tools Dependency -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjtools</artifactId>
@@ -237,7 +220,7 @@
 		</dependency>
 
 
-		<!-- ASPECTJ Run Time Dependancy -->
+		<!-- ASPECTJ Run Time Dependency -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
@@ -245,6 +228,7 @@
 		</dependency>
 
 
+		<!-- SLF4J API Dependency -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
@@ -252,6 +236,8 @@
 			<scope>test</scope>
 		</dependency>
 
+
+		<!-- SLF4J Log4j Dependency -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
@@ -259,6 +245,8 @@
 			<scope>test</scope>
 		</dependency>
 
+
+		<!-- SLF4J jull-2-SLL4J Dependency -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jul-to-slf4j</artifactId>
@@ -266,65 +254,31 @@
 			<scope>test</scope>
 		</dependency>
 
+
+		<!-- SLF4J jcl-over-SL4J Dependency -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>jcl-over-slf4j</artifactId>
 			<version>${slf4j.version}</version>
 			<scope>test</scope>
 		</dependency>
+
+
+		<!-- Allure Attachment Adapter -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-attachments</artifactId>
+			<version>${allure.version}</version>
+		</dependency>
+
+
+		<!-- Allure TestNG Adapter -->
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>${allure.version}</version>
+		</dependency>
 	</dependencies>
-
-	<profiles>
-		<profile>
-			<id>release-sign-artifacts</id>
-			<build>
-				<plugins>
-					<!-- This plugin signs all of the project's attached artifacts with 
-						GnuPG -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>1.6</version>
-					</plugin>
-
-					<!-- This Plugin is used to compile the sources of your project -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-compiler-plugin</artifactId>
-						<version>3.6.1</version>
-						<configuration>
-							<source>1.8</source>
-							<target>1.8</target>
-						</configuration>
-					</plugin>
-
-					<!-- This Plugin handles the copying of project resources to the output 
-						directory -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-resources-plugin</artifactId>
-						<version>3.0.2</version>
-					</plugin>
-
-					<!-- This Plugin creates a jar archive of the source files of the current 
-						project -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-source-plugin</artifactId>
-						<version>3.0.1</version>
-					</plugin>
-
-					<!-- The Javadoc Plugin uses the Javadoc tool to generate javadocs for 
-						the specified project -->
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-javadoc-plugin</artifactId>
-						<version>2.10.4</version>
-					</plugin>
-				</plugins>
-			</build>
-		</profile>
-	</profiles>
 
 	<build>
 		<plugins>
@@ -332,7 +286,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.20</version>
+				<version>2.22.0</version>
 				<configuration>
 					<suiteXmlFiles>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
@@ -348,20 +302,39 @@
 				</dependencies>
 			</plugin>
 
-			<!-- To Display the Environment Details in the Allure Report/Copy Enivroment.XML 
-				File to allure-results Folder -->
+			<!-- This plugin signs all of the project's attached artifacts with GnuPG -->
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.6</version>
+			</plugin>
+
+			<!-- This Plugin is used to compile the sources of your project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+
+			<!-- This Plugin handles the copying of project resources to the output 
+				directory -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
-				<version>3.0.2</version>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>copy-allure-environment</id>
-						<phase>pre-site</phase>
+						<phase>test</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${basedir}/target/allure-results</outputDirectory>
+							<outputDirectory>${basedir}/allure-results</outputDirectory>
 							<resources>
 								<resource>
 									<directory>${basedir}/src/main/resources</directory>
@@ -375,17 +348,20 @@
 				</executions>
 			</plugin>
 
-			<!--Needed only to show reports locally. Run jetty:run and open localhost:8080 
-				to show the report -->
+			<!-- This Plugin creates a jar archive of the source files of the current 
+				project -->
 			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>9.4.0.v20161208</version>
-				<configuration>
-					<webAppSourceDirectory>${project.build.directory}/site/allure-maven-plugin</webAppSourceDirectory>
-					<stopKey>stop</stopKey>
-					<stopPort>1234</stopPort>
-				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+			</plugin>
+
+			<!-- The Javadoc Plugin uses the Javadoc tool to generate javadocs for 
+				the specified project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.0.1</version>
 			</plugin>
 		</plugins>
 	</build>
@@ -395,14 +371,10 @@
 		<excludeDefaults>true</excludeDefaults>
 		<plugins>
 			<plugin>
-				<groupId>ru.yandex.qatools.allure</groupId>
-				<artifactId>allure-maven-plugin</artifactId>
-				<version>2.6</version>
-				<configuration>
-					<reportVersion>${allure.version}</reportVersion>
-				</configuration>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.9</version>
 			</plugin>
 		</plugins>
 	</reporting>
-</project>
-	
+</project>	
